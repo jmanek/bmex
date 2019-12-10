@@ -131,7 +131,7 @@ def _store(start: str, symbols: set, channel: str, path: str, base: str):
                         os.remove(_file)
                     new = False
 
-                with open(_file, "a") as out:
+                with open(_file, "a", newline='\n') as out:
                     write = csv.writer(out)
                     write.writerow(row)
     os.remove(temp)
